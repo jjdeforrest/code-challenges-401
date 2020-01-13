@@ -19,3 +19,6 @@ Put in new element in middle of array without deleting
 doing everything on white board
 ## Solution
 ![img](ArrayShift.jpg)
+
+
+![lab03](https://github.com/jjdeforrest/code-challenges-401/issues/2#issue-549125471)
