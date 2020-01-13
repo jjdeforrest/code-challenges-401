@@ -7,7 +7,7 @@ take in a array and reverse
 ## Approach & Efficiency
 doing everything on white board
 ## Solution
-![lab01](../assets/ArrayReverse.jpg)
+![](./assets/ArrayReverse.jpg)
 
 # Reverse an Array
 ArrayShift
@@ -29,4 +29,4 @@ taking in arrays and sort through to find the same match key
 ## Approach and Efficiency
 Doing everything on white board then talking it out and exchanging ideas
 
-![lab03](../assets/lab03binarysearch.jpg)
+![lab03](./assets/lab03binarysearch.jpg)
