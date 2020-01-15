@@ -1,6 +1,6 @@
 package code.challenges;
 
-import java.util.Arrays;
+        import java.util.Arrays;
 
 public class ArrayShift {
     public static void main(String[] args) {
