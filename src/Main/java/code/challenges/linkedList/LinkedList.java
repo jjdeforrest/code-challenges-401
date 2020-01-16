@@ -87,6 +87,27 @@ public class LinkedList {
             present = present.next;
         }
     }
+
+
+    public int kthFromEnd(int k) {
+        int counter = 0;
+        Node position = this.head;
+        while (position != null){
+            counter++;
+            position = position.next;
+        }
+        if(k > counter){
+            throw new NullPointerException("Inputted value is to big");
+        }
+        for(int i = 1; i < (counter - k); i++){
+            this.head = this.head.next;
+        }
+        return this.head.value;
+    }
+
+
+
+
 }
 
 
