@@ -37,4 +37,12 @@ add nodes
 ## Approach and Efficiency
 Doing everything on white board then talking it out and exchanging ideas
 
-![lab03](./assets/11-insertions.jpg)
+![](./assets/11-insertions.jpg)
+
+## challenge
+merge 2 linklist in certain order
+
+## Approach and Efficiency
+Doing everything on white board then talking it out and exchanging ideas
+
+![](./assets/11-kth-from-end.jpg)
