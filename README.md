@@ -30,3 +30,11 @@ taking in arrays and sort through to find the same match key
 Doing everything on white board then talking it out and exchanging ideas
 
 ![lab03](./assets/lab03binarysearch.jpg)
+
+## challenge
+add nodes
+
+## Approach and Efficiency
+Doing everything on white board then talking it out and exchanging ideas
+
+![lab03](./assets/11-insertions.jpg)
