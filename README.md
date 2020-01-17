@@ -5,7 +5,7 @@
 
 [Day 2: Array Shift](./otherReadmes/arrayshift.md)
 
-[Day 3: Binary Search](./otherReadmes/binarysearch.md)
+[Day 3: Binary Search](/otherReadmes/binarysearch.md)
 
 [Day 6: Linked List Insertion](./otherReadmes/ll-insertions.md)
 
