@@ -11,5 +11,5 @@
 
 [Day 7: Linked List KthFromEnd](/otherReadmes/ll-kth-from-end.md)
 
-[Day 8: Linked List Merge](/otherReadmes/ll-merge.md)
+[Day 8: Linked List Merge](otherReadmes/ll-merge.md)
 
