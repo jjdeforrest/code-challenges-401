@@ -1,115 +1,133 @@
 package code.challenges.linkedList;
 
 
-import java.util.StringJoiner;
+import java.util.*;
 
 public class LinkedList {
 
     Node head;
 
-    public LinkedList() {
-        this.head = null;
-    }
-
     public void insert(int value) {
-        Node node = new Node(value, head);
-        this.head = node;
+
+        Node node = new Node();
+        node.value = value;
+        node.next = head;
+        head = node;
+
     }
 
-    public boolean includes(int value) {
-
-        Node search = this.head;
-        while (search != null) {
-            if (search.value == value)
+    public String showString() {
+        Node n = head;
+        String result = "";
+        while (n.next != null) {
+            String fruit = String.format("{ %d } -> ", n.value);
+            result += fruit;
+            n = n.next;
+        }
+        String orange = String.format("{ %d } -> NULL", n.value);
+        result += orange;
+        System.out.println(result);
+        return result;
+    }
+    public boolean includes ( int value){
+        Node n = head;
+        while (n.next != null) {
+            if (n.value == value) {
                 return true;
-            search = search.next;
+            }
+            n = n.next;
+        }
+        if (n.value == value) {
+            return true;
         }
         return false;
     }
-
-    public String toString() {
-        Node currentNode = this.head;
-        StringJoiner position = new StringJoiner(", ");
-        while (currentNode != null) {
-            position.add(Integer.toString(currentNode.value));
-            currentNode = currentNode.next;
+    public void append ( int value){
+        Node n = head;
+        while (n.next != null) {
+            n = n.next;
         }
-        return position.toString();
+        Node newNode = new Node();
+        n.next = newNode;
+        newNode.value = value;
     }
-
-    public void append(int value) {
-        Node freshNode = new Node(value, null);
-
-        if (head == null) {
-            head = new Node(value, null);
-            return;
-        }
-        freshNode.next = null;
-        Node last = head;
-        while (last.next != null)
-            last = last.next;
-        last.next = freshNode;
-    }
-
-    public void insertBefore(int value, int newValue) {
-        if (this.head.value == value) {
-            this.insert(newValue);
-            return;
-        } else if (!this.includes(value)) {
-            return;
-        }
-
-        Node present = this.head;
-        while (present != null) {
-            if (present.next.value == value) {
-                Node newNode = new Node(newValue, null);
-                newNode.next = present.next;
-                present.next = newNode;
+    public void insertBefore ( int value, int newValue){
+        Node n = head;
+        Node next = n.next;
+        while (n.next != null) {
+            if (n.value == value || next.value == value) {
                 break;
             }
-            present = present.next;
+            n = n.next;
+        }
+        if (next.value == value) {
+            Node newNode = new Node();
+            newNode.next = next;
+            n.next = newNode;
+            newNode.value = newValue;
+        } else if (n.value == value && n.next != null) {
+            Node newNode = new Node();
+            newNode.value = newValue;
+            newNode.next = head;
+            head = newNode;
+        } else {
+            System.out.println("Value not found in linked list");
         }
     }
-
-    public void insertAfter(int value, int newValue) {
-        if (!this.includes(value)) {
-            return;
-        }
-
-        Node present = this.head;
-        while (present != null) {
-            if (present.value == value) {
-                Node newNode = new Node(newValue, null);
-                newNode.next = present.next;
-                present.next = newNode;
+    public void insertAfter ( int value, int newValue){
+        Node n = head;
+        Node next = n.next;
+        while (n.next != null || n.value == value) {
+            if (n.value == value) {
+                Node newNode = new Node();
+                newNode.value = newValue;
+                n.next = newNode;
+                newNode.next = next;
                 break;
             }
-            present = present.next;
+            n = n.next;
+            next = n.next;
         }
     }
-
-
-    public int kthFromEnd(int k) {
+    public int returnFromEnd ( int k){
+        if (k < 0) {
+            throw new IllegalArgumentException();
+        }
         int counter = 0;
-        Node position = this.head;
-        while (position != null){
+        Node n = this.head;
+        while (n.next != null) {
+            n = n.next;
             counter++;
-            position = position.next;
         }
-        if(k > counter){
-            throw new NullPointerException("Inputted value is to big");
+        if (k - 1 > counter) {
+            throw new IllegalArgumentException();
         }
-        for(int i = 1; i < (counter - k); i++){
-            this.head = this.head.next;
+        n = this.head;
+        for (int i = 0; i < counter - k; i++) {
+            n = n.next;
         }
-        return this.head.value;
+        return n.value;
     }
 
+    public static LinkedList mergeList(LinkedList list1, LinkedList list2){
+        Node current1 = list1.head;
+        Node current2 = list2.head;
+        Node zipper1;
+        Node zipper2;
+        while(current1 != null && current2 != null){
 
+            zipper1 = current1.next;
+            zipper2 = current2.next;
 
+            current1.next = zipper2;
+            current2.next = zipper1;
 
+            // switching the pointers
+            current1 = zipper1;
+            current2 = zipper2;
+
+        }
+        list2.head = current2;
+        return list1;
+    }
 }
-
-
-
-

@@ -1,48 +1,15 @@
-# Reverse an Array
-reversing array
+# data-structures-and-algorithms
 
-## Challenge
-take in a array and reverse
+# Table of Content for 401
+[Day 1: Array Reverse](code-challenges-401/otherReadmes/ArrayReverse.md)
 
-## Approach & Efficiency
-doing everything on white board
-## Solution
-![](./assets/ArrayReverse.jpg)
+[Day 2: Array Shift](code-challenges-401/otherReadmes/arrayshift.md)
 
-# Reverse an Array
-ArrayShift
+[Day 3: Binary Search](code-challenges-401/otherReadmes/binarysearch.md)
 
-## Challenge
-Put in new element in middle of array without deleting
+[Day 6: Linked List Insertion](code-challenges-401/otherReadmes/ll-insertions.md)
 
-## Approach & Efficiency
-doing everything on white board
-## Solution
-![](./assets/ArrayShift.jpg)
+[Day 7: Linked List KthFromEnd](code-challenges-401/otherReadmes/ll-kth-from-end.md)
 
-# Binary Search
-Write a function which takes in 2 parameters: a sorted array and the search key. Without utilizing built-in methods return the index of the array’s element that is equal to the search key, or -1 if the element does not exist.
+[Day 8: Linked List Merge](code-challenges-401/otherReadmes/ll-merge.md)
 
-## challenge
-taking in arrays and sort through to find the same match key
-
-## Approach and Efficiency
-Doing everything on white board then talking it out and exchanging ideas
-
-![lab03](./assets/lab03binarysearch.jpg)
-
-## challenge
-add nodes
-
-## Approach and Efficiency
-Doing everything on white board then talking it out and exchanging ideas
-
-![](./assets/11-insertions.jpg)
-
-## challenge
-merge 2 linklist in certain order
-
-## Approach and Efficiency
-Doing everything on white board then talking it out and exchanging ideas
-
-![](./assets/11-kth-from-end.jpg)

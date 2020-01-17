@@ -1,10 +1,9 @@
 package code.challenges;
 
-        import java.util.Arrays;
+import java.util.Arrays;
 
 public class ArrayShift {
     public static void main(String[] args) {
-        // text case for insertShiftArray()
         int[] testArrayEvenLength = new int[] {1,2,3,4,10,11};
         int[] testArrayOddLength = new int[] {1,2,3,4,10,11,12};
         int testValue1 = 99;
@@ -14,6 +13,8 @@ public class ArrayShift {
         System.out.println("testArrayEvenLength: " + Arrays.toString(testArrayEvenLength) + " testValue: " + testValue1);
         System.out.println("testArrayOddLength: " + Arrays.toString(testArrayOddLength) + " testValue: " + testValue2);
     }
+
+
     public static int[] insertShiftArray(int[] array, int value) {
         int[] newArray = new int[array.length +1];
         for (int i=0; i < newArray.length; i++) {
