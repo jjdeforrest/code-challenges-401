@@ -9,10 +9,10 @@ public class LinkedList {
 
     public void insert(int value) {
 
-        Node node = new Node();
-        node.value = value;
-        node.next = head;
-        head = node;
+        Node newNode = new Node(value);
+        //newNode.value = value;
+        newNode.next = head;
+        head = newNode;
 
     }
 
@@ -47,9 +47,9 @@ public class LinkedList {
         while (n.next != null) {
             n = n.next;
         }
-        Node newNode = new Node();
+        Node newNode = new Node(value);
         n.next = newNode;
-        newNode.value = value;
+        //newNode.value = value;
     }
     public void insertBefore ( int value, int newValue){
         Node n = head;
@@ -61,13 +61,13 @@ public class LinkedList {
             n = n.next;
         }
         if (next.value == value) {
-            Node newNode = new Node();
+            Node newNode = new Node(newValue);
             newNode.next = next;
             n.next = newNode;
-            newNode.value = newValue;
+            //newNode.value = newValue;
         } else if (n.value == value && n.next != null) {
-            Node newNode = new Node();
-            newNode.value = newValue;
+            Node newNode = new Node(newValue);
+            //newNode.value = newValue;
             newNode.next = head;
             head = newNode;
         } else {
@@ -79,8 +79,8 @@ public class LinkedList {
         Node next = n.next;
         while (n.next != null || n.value == value) {
             if (n.value == value) {
-                Node newNode = new Node();
-                newNode.value = newValue;
+                Node newNode = new Node(newValue);
+                //newNode.value = newValue;
                 n.next = newNode;
                 newNode.next = next;
                 break;
@@ -119,8 +119,8 @@ public class LinkedList {
             zipper1 = current1.next;
             zipper2 = current2.next;
 
-            current1.next = zipper2;
             current2.next = zipper1;
+            current1.next = current2;
 
             // switching the pointers
             current1 = zipper1;
