@@ -109,6 +109,8 @@ public class LinkedList {
         return n.value;
     }
 
+
+    //code challenge 08
     public static LinkedList mergeList(LinkedList list1, LinkedList list2){
         Node current1 = list1.head;
         Node current2 = list2.head;
