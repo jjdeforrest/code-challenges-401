@@ -235,6 +235,8 @@ public class LinkedListTest {
         linky.insert(6);
         assertEquals("The value of the first node should be returned",6,linky.returnFromEnd(2));
     }
+
+    ///merge test code challenge 08
     @Test
     public void testMergeList(){
         LinkedList linky = new LinkedList();
@@ -242,10 +244,33 @@ public class LinkedListTest {
         linky.insert(0);
         linky.insert(0);
         LinkedList linky2 = new LinkedList();
-        linky.insert(1);
-        linky.insert(1);
-        linky.insert(1);
-        LinkedList testList = LinkedList.mergeList(linky,linky2);
-        System.out.println(testList.toString());
+        linky2.insert(1);
+        linky2.insert(1);
+        linky2.insert(1);
+        LinkedList.mergeList(linky,linky2);
+        Node nodey = linky.head;
+        assertEquals("The values should alternate",1,nodey.next.value);
+        assertEquals("The values should alternate",0,nodey.next.next.value);
     }
+
+    @Test
+    public void testMerging(){
+        LinkedList linky = new LinkedList();
+        linky.insert(0);
+        linky.insert(0);
+        linky.insert(0);
+        linky.insert(0);
+        linky.insert(0);
+        LinkedList linky2 = new LinkedList();
+        linky2.insert(1);
+        linky2.insert(1);
+        linky2.insert(1);
+
+        LinkedList.mergeList(linky,linky2);
+        Node nodey = linky.head;
+        assertEquals("The values should alternate",1,nodey.next.value);
+        assertEquals("The values should alternate",0,nodey.next.next.value);
+    }
+
+
 }
