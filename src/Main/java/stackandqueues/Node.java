@@ -12,4 +12,15 @@ public class Node {
         this.value = value;
         this.next = next;
     }
+
+    public Node getNext() {
+        return next;
+    }
+
+    @Override
+    public String toString() {
+        return "Node has a value of" + this.value;
+
+    }
 }
+

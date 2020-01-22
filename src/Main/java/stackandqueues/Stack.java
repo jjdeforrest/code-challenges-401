@@ -1,6 +1,6 @@
 package stackandqueues;
 
-import code.challenges.linkedList.Node;
+import code.challenges.stackandqueues.Node;
 
 public class Stack {
 
@@ -8,13 +8,21 @@ public class Stack {
 
 
     public static void main (String[] args) {
-        Stack<Integer> stack = new Stack<Integer>();
+        Stack stack = new Stack();
+
+        stack.push(1);
+        stack.push(2);
+        stack.push(3);
+        System.out.println(stack.getHead(stack.getHead());
     }
 
+    public Node getHead() {
+        return head;
+    }
 
-    public void insert(int value) {
+    public void push(int value) {
 
-        code.challenges.linkedList.Node newNode = new Node(value);
+        code.challenges.stackandqueues.Node newNode = new Node(value);
         //newNode.value = value;
         newNode.next = head;
         head = newNode;
@@ -29,11 +37,12 @@ public class Stack {
         peek();
     }
 
-    public boolean isEmpty(){
+    public  boolean isEmpty(){
         Node n = head;
         while(n.next != null){
-            return true;
+
         }
+        return true;
     }
 
 
