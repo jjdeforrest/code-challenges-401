@@ -214,7 +214,7 @@ public class LinkedListTest {
     }
 
 
-
+//lab07
     @Test(expected = IllegalArgumentException.class)
     public void returnKGreaterThanLength(){
         LinkedList linky = new LinkedList();
@@ -238,6 +238,14 @@ public class LinkedListTest {
         linky.insert(6);
         assertEquals("The value of the first node should be returned",6,linky.returnFromEnd(2));
     }
+
+    @Test
+    public void kLinkListSizeOne(){
+        LinkedList linky = new LinkedList();
+        linky.insert(1);
+        assertEquals("The value of the first node should be returned",1, linky.returnFromEnd(1));
+    }
+
 
     ///merge test code challenge 08
     @Test
