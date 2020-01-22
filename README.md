@@ -14,3 +14,5 @@
 [Day 8: Linked List Merge](otherReadmes/11-merge.md)
 
 [lab10](otherReadmes/StackandQueues.md)
+
+[code challenge 11](otherReadmes/pseudoqueue.md)

@@ -1,8 +1,8 @@
 # pseudoqueue code challenge 11
-write 2 methods which one will add one to the stack and the other will remove from the stack
+working with multiple stacks with internal 2 stack methods that go along with other stuff that is already their.
 ## challenge
-takes and adds at specific parts front and back
+pops and add certain parts in certain positions going through everything in the stack in order and getting it right with multiples going in.
 ## Approach and Efficiency
 Doing everything on white board then talking it out and exchanging ideas
-
+using muliple monitors to easier visually see how things go back and fourth between pages. Also writing it out and drawing lines to help visually see how the information flows back and fourth
 ![](../assets/pseuduoqueue.jpg)
