@@ -2,41 +2,37 @@ package stackandqueues;
 
 import code.challenges.linkedList.Node;
 
+import java.util.EmptyStackException;
+
 public class Stack {
 
-    code.challenges.linkedList.Node head;
+    Node top;
 
-
-    public static void main (String[] args) {
-        Stack<Integer> stack = new Stack<Integer>();
+    public void push(int value) {
+        Node newer = new Node(value);
+        newer.next = top;
+        top = newer;
     }
 
-
-    public void insert(int value) {
-
-        code.challenges.linkedList.Node newNode = new Node(value);
-        //newNode.value = value;
-        newNode.next = head;
-        head = newNode;
-
+    public int pop() {
+        if (this.top == null) {
+            throw new EmptyStackException();
+        };
+        Node position = top;
+        top = position.next;
+        position.next = null;
+        return position.value;
     }
 
-    public void pop() {
-        pop();
-    }
-
-    public void peek(){
-        peek();
-    }
-
-    public boolean isEmpty(){
-        Node n = head;
-        while(n.next != null){
-            return true;
+    public int peek() {
+        if (this.top == null) {
+            throw new EmptyStackException();
         }
+        return this.top.value;
     }
 
+    public boolean isEmpty() {
 
-
-
+        return this.top == null;
+    }
 }

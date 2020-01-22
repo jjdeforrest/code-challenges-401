@@ -1,35 +1,46 @@
 package stackandqueues;
 
-import code.challenges.linkedList.Node;
+import java.util.EmptyStackException;
 
 
 public class Queue {
 
+    Node front;
 
-    public static void main(String[] args) {
-        Queue myObj = new Queue();
+    public Queue() {};
 
-    }
-
-    public static enqueue(int last){
-        while(last != null){
-            return last = new Node(last);
+    public void enqueue(int value) {
+        Node newer = new Node(value);
+        if (this.front == null) {
+            front = newer;
+        } else {
+            Node position = front;
+            while (position.next != null) {
+                position = position.next;
+            }
+            position.next = newer;
         }
     }
 
-
-    public void dequeue(){
-        poll();
+    public int dequeue() {
+        if (this.front == null) {
+            throw new EmptyStackException();
+        } else {
+            Node position = front;
+            front = position.next;
+            position.next = null;
+            return position.value;
+        }
     }
 
-    private void poll() {
-        poll();
+    public int peek() {
+        if (this.front == null) {
+            throw new EmptyStackException();
+        };
+        return this.front.value;
     }
 
-    public void peek(){
-        peek();
+    public boolean isEmpty() {
+        return this.front == null;
     }
-
-
-
 }

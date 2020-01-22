@@ -5,6 +5,7 @@ public class Node {
     Node next;
 
     public Node(int value) {
+
         this(value, null);
     }
 
