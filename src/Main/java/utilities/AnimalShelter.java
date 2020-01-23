@@ -2,37 +2,53 @@ package utilities;
 
 public class AnimalShelter {
 
-    String dog;
-    String cat;
-    int amount;
-    int counter = 0;
 
-    public AnimalShelter(String dog, String cat, int amount){
-        this.dog = dog;
-        this.cat = cat;
-        this.amount = amount;
-    }
+    Animal back;
 
-    public int enqueue(String animal) {
-        String d = dog;
-        String c = cat;
-        String no = "hell no";
-        String cute = "so cute";
-        if (animal == d || animal == c) {
-            counter++;
-            this.amount = counter;
-        }
-    }
-
-    public String dequeue(String animal){
-        String d = dog;
-        String c = cat;
-        String no = "hell no";
-        String cute = "so cute";
-        if(animal != d || animal != d){
-            return no;
+    public void enqueue(String name){
+        Animal creature = new Animal(name);
+        if(back == null){
+            back = creature;
         } else {
-           return cute;
+            creature.next = back;
+            back = creature;
         }
+    }
+
+    public String dequeue(){
+        String position;
+        Animal current = back;
+        if(back == null){
+            return null;
+        } else{
+            while(current.next.next != null){
+                current = current.next;
+            }
+            position = current.next.name;
+            current.next = null;
+        }
+        return position;
+    }
+
+    public String prefCheckDogorCat(String animal){
+        String dog = "dog";
+        String cat = "cat";
+        String accepted = "accepted";
+        String no = "hell no";
+        if(animal == "dog" || animal == "cat"){
+            return accepted;
+        } else {
+            return no;
+        }
+
+    }
+
+    public String toString(){
+        Animal current = back;
+        String str = "";
+        while(current.next != null){
+            current = current.next;
+        }
+        return str;
     }
 }

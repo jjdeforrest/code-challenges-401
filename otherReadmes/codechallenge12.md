@@ -1,4 +1,4 @@
-# pseudoqueue code challenge 11
+# pseudoqueue code challenge 12
 Build multiple classes to add and remove cats to certain shelters and return null if not cat or dog
 ## challenge
 Putting together multiple classes then only adding dog or cat to them and be able to remove them also and keep out other types of animals

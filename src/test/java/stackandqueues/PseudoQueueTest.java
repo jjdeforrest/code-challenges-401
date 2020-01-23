@@ -20,7 +20,6 @@ public class PseudoQueueTest {
         PseudoQueue first = new PseudoQueue();
         first.enqueue(2);
         first.enqueue(1);
-
         assertEquals("follow first in first out",2,first.dequeue());
     }
 
