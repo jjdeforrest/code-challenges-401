@@ -4,6 +4,12 @@ import com.sun.source.tree.BinaryTree;
 
 public class BinarySearchTree {
 
+    private Node root;
+
+    public BinarySearchTree() {
+        this.root = null;
+    }
+
     public void preOrder(Node node) {
         if (node != null) {
             System.out.print(" " + node.value);
@@ -47,6 +53,7 @@ public class BinarySearchTree {
 
 
     public void add(int value) {
+
         root = addNode(root, value);
     }
 
