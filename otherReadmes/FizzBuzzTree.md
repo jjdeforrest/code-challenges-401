@@ -6,4 +6,4 @@ Take in info and see if its divisible by 3 or 5 or both. Needs to return fizz if
 ## Approach and Efficiency
 Doing everything on white board then talking it out and exchanging ideas
 using muliple monitors to easier visually see how things go back and fourth between pages. Also writing it out and drawing lines to help visually see how the information flows back and fourth
-![](../assets/multibracketvalidation.jpg)
+![](../assets/fizzbuzzcode16.jpg)
