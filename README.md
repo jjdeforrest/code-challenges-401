@@ -22,3 +22,7 @@
 [code challenge 13](otherReadmes/multibracketvalidation.md)
 
 [class 15](otherReadmes/class15.md)
+
+[class 16](otherReadmes/FizzBuzzTree.md)
+
+[class 17](otherReadmes/codechallenge17.md)
