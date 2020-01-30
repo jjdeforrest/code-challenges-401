@@ -26,3 +26,5 @@
 [class 16](otherReadmes/FizzBuzzTree.md)
 
 [class 17](otherReadmes/codechallenge17.md)
+
+[class 18](otherReadmes/codechallenge18.md)
