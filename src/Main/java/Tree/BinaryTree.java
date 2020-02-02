@@ -1,27 +1,34 @@
 package Tree;
 
-//public class BinaryTree extends BinarySearchTree<Integer>{
-//
-//    public Node<Integer> root;
-//
-//    public void insert(int value){
-//        root = insert(root, value);
-//    }
-//
-//    //overloading a method
-//    public Node<Integer> insert(Node<Integer> node, int val) {
-//        if(node == null) {
-//            root = new Node<>(val);
-//            return root;
-//        }
-//        if(val < node.data) {
-//            node.left = insert(node.left, val);
-//        } else if(val > node.data) {
-//            node.right = insert(node.right, val);
-//        }
-//        return node;
-//    }
-//
-//
-//}
+public class BinaryTree {
 
+    public Node root;
+
+    public BinaryTree(Node root){
+        this.root = root;
+    }
+
+    public void insert(int value){
+
+        this.root = add(this.root, value);
+    }
+
+
+    public Node add(Node root, int value){
+        // if the tree is empty return the new value
+        if (root == null){
+            // this case solves insert being called on an empty tree
+            root = new Node(value);
+            return root;
+        }
+        else if(value < root.data){
+            root.left = add(root.left, value);
+        }
+        else if (value > root.data){
+            root.right = add(root.right, value);
+        }
+        return root;
+    }
+
+
+}
