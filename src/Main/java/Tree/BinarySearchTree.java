@@ -64,7 +64,6 @@ public class BinarySearchTree {
     }
 
 
-    //runs recursive insert
     public void insert(int value){
 
         this.root = add(this.root, value);
@@ -72,9 +71,7 @@ public class BinarySearchTree {
 
 
     public Node add(Node root, int value){
-        // if the tree is empty return the new value
         if (root == null){
-            // this case solves insert being called on an empty tree
             root = new Node(value);
             return root;
         }
