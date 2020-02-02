@@ -1,33 +1,21 @@
-//package Tree;
-//
-//import org.junit.Before;
-//import org.junit.Test;
-//
-//import static org.junit.Assert.assertEquals;
-//import static org.junit.Assert.assertNull;
-//
-//import javafx.scene.Node;
-//import org.junit.Before;
-//import org.junit.Test;
-//
-//import static org.junit.Assert.*;
-//
-//public class NodeTest {
-//
-//
-//    Node<Integer> newNode;
-//
-//    @Before
-//    public void preTestBuild() {
-//        newNode = new Node<>(5);
-//    }
-//
-//    @Test
-//    public void testNodeInstance() {
-//        Integer correct = 5;
-//        assertEquals("should return correct newNode left", correct, newNode.data);
-//        assertNull("should return correct newNode left", newNode.left);
-//        assertNull("should return correct newNode right", newNode.right);
-//    }
-//
-//}
+package Tree;
+
+import org.junit.Test;
+
+import java.util.ArrayList;
+
+import static org.junit.Assert.assertEquals;
+
+public class NodeTest {
+
+
+    @Test
+    public void constructorTest(){
+        Tree.Node root = new Tree.Node(1, new Tree.Node(2), new Node(3));
+        BinaryTree tree = new BinaryTree(root);
+        ArrayList<Integer> actual = new ArrayList<>();
+        assertEquals(1, root.data);
+        assertEquals(2, root.left.data);
+        assertEquals(3, root.right.data);
+    }
+}

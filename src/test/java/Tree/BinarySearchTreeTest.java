@@ -11,6 +11,9 @@ public class BinarySearchTreeTest {
 
     static BinarySearchTree tree;
 
+
+
+
     @Before
     public void initial() {
         tree = new BinarySearchTree();
@@ -21,6 +24,16 @@ public class BinarySearchTreeTest {
         tree.insert(15);
         tree.insert(16);
     };
+
+    @Test
+    public void constructorTest(){
+        Node root = new Node(1, new Node(2), new Node (3));
+        BinaryTree tree = new BinaryTree(root);
+        ArrayList<Integer> actual = new ArrayList<>();
+        assertEquals(1, root.data);
+        assertEquals(2, root.left.data);
+        assertEquals(3, root.right.data);
+    }
 
     @Test
     public void testPreOrder() {
@@ -55,6 +68,7 @@ public class BinarySearchTreeTest {
         assertTrue(tree.contains(tree.root, 50));
 
     }
+
 
 
 
