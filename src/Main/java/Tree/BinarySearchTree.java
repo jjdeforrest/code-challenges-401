@@ -1,6 +1,4 @@
 package Tree;
-
-
 import java.util.ArrayList;
 
 public class BinarySearchTree {
@@ -11,7 +9,6 @@ public class BinarySearchTree {
         this.root = root;
     }
 
-    // method overloading
     public BinarySearchTree(){
         this.root = null;
     }
@@ -85,4 +82,20 @@ public class BinarySearchTree {
     }
 
 
+    private ArrayList<Integer> breathFirst(Node node){
+        ArrayList<Integer> number = new ArrayList<>();
+        if (node == null){
+            return new ArrayList<>();
+        }
+        else {
+            number.add(node.data);
+            if(node.left != null){
+                number.add(node.left.data);
+            }
+            if(node.right!=null){
+                number.add(node.right.data);
+            }
+        }
+        return number;
+    }
 }
