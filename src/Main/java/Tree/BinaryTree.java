@@ -1,5 +1,7 @@
 package Tree;
 
+import java.util.NoSuchElementException;
+
 public class BinaryTree {
 
     public Node root;
@@ -33,6 +35,27 @@ public class BinaryTree {
         }
         return root;
     }
+
+    public int findMaxVal(){
+        if (this.root == null){
+            throw new NoSuchElementException("empty");
+        }
+        return findMaxVal(this.root);
+    }
+
+    private int findMaxVal(Node current){
+        int maxResult = current.data;
+        if (current.left != null){
+            maxResult = Math.max(maxResult,findMaxVal(current.left));
+        }
+        if (current.right != null){
+            maxResult = Math.max(maxResult, findMaxVal(current.right));
+        }
+        return maxResult;
+    }
+
+
+
 
 
 }
