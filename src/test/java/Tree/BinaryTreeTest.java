@@ -48,4 +48,20 @@ public class BinaryTreeTest {
         assertTrue(tree.contains(tree.root, 50));
 
     }
+
+    @Test
+    public void maxValueTest(){
+        Node root = new Node(3, new Node(4), new Node (5));
+        BinaryTree tree = new BinaryTree(root);
+        int actual = tree.findMaxVal();
+        assertEquals(5,actual);
+    }
+
+
+
+
+
+
+
+
 }

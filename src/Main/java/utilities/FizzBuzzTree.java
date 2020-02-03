@@ -5,9 +5,7 @@ import Tree.BinaryTree;
 import Tree.FizzNode;
 
 public class FizzBuzzTree extends BinaryTree {
-
-
-
+    
     public FizzBuzzTree(FizzNode fizzNode) {
         super(fizzNode);
     }
