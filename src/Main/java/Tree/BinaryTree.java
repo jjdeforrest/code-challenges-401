@@ -3,6 +3,12 @@ package Tree;
 public class BinaryTree {
 
     public Node root;
+    public FizzNode fizzNode;
+
+    public BinaryTree(FizzNode strRoot) {
+        this.fizzNode = strRoot;
+        this.root= null;
+    }
 
     public BinaryTree(Node root){
         this.root = root;
