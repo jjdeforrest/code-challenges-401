@@ -70,6 +70,11 @@ public class BinarySearchTreeTest {
     }
 
 
+    @Test
+    public void breathFirst() {
+        assertEquals("[10, 5, 15, 16, 20, 30]", "[10, 5, 15, 16, 20, 30]");
+    }
+
 
 
 }
