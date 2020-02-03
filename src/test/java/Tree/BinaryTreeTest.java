@@ -9,6 +9,7 @@ import static org.junit.Assert.*;
 
 public class BinaryTreeTest {
 
+
     static BinarySearchTree tree;
 
     @Before
@@ -47,5 +48,4 @@ public class BinaryTreeTest {
         assertTrue(tree.contains(tree.root, 50));
 
     }
-
 }
