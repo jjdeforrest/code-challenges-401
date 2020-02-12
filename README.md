@@ -30,3 +30,5 @@
 [class 18](otherReadmes/codechallenge18.md)
 
 [challenge 26](otherReadmes/codechallenge26.md)
+
+[challenge 27](otherReadmes/codechallenge27.md)
