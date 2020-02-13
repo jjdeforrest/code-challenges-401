@@ -32,3 +32,5 @@
 [challenge 26](otherReadmes/codechallenge26.md)
 
 [challenge 27](otherReadmes/codechallenge27.md)
+
+[challenge 28](otherReadmes/codechallenge28.md)
