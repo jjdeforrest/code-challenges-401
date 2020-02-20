@@ -2,14 +2,10 @@ package RepeatedWord;
 
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Scanner;
 
 public class RepeatedWord {
 
-    public static void main(String[] args) {
-        String input = sn.nextLine();
-        String[] words = input.split(" ");
-
+    public static void repeatedword(String[] words) {
         Map<String,String> wordMap = new HashMap<String,String>();
         Map<String,String> printedMap = new HashMap<String,String>();
 
