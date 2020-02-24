@@ -1,5 +1,5 @@
 ##Code challenge 32
 
 ##Challenge
-take in string and find the first repeating word
+Find the repeated that repeats it self twice.
 ![](../assets/codechallenge32.jpg)
