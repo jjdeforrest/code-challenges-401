@@ -1,6 +1,14 @@
 package Tree;
 
 public class Node<T> {
+
+    public Node<T> root;
+
+    public Node() {
+        this.root = null;
+    }
+
+
     public int data;
     public Node<T> left;
     public Node<T> right;
