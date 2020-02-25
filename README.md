@@ -43,4 +43,6 @@
 
 [challenge 35](otherReadmes/codechallenge35.md)
 
+##breadth-first
+[challenge 36](otherReadmes/codechallenge36.md)
 
