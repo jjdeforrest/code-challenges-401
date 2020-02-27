@@ -46,3 +46,9 @@
 ##breadth-first
 [challenge 36](otherReadmes/codechallenge36.md)
 
+##Get Edge
+[challenge 37](otherReadmes/codechallenge37.md)
+
+##Get Edge
+[challenge 38](otherReadmes/codechallenge38.md)
+
