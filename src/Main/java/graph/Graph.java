@@ -1,10 +1,8 @@
 package graph;
 
-import BreadthFirst.BreadthFirst;
-
 import java.util.ArrayList;
 
-public class Graph extends BreadthFirst.Node {
+public class Graph {
     ArrayList<Node> list = new ArrayList<>();
     public Node addNode(int value){
         Node newNode = new Node(value);

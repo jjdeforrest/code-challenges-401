@@ -1,12 +1,46 @@
 package BreadthFirst;
 
+import com.google.common.graph.Graph;
+import graph.Node;
+import org.junit.Before;
 import org.junit.Test;
-
-import static org.junit.Assert.*;
 
 public class BreadthFirstTest {
 
+    Graph<String> testStringGraph;
+    Node<String> phong;
+    Node<String> maya;
+    Node<String> mani;
+    Node<String> janai;
+
+    @Before
+    public void setup(){
+        testStringGraph = new Graph<>();
+        phong = testStringGraph.addNode("Phong");
+        maya = testStringGraph.addNode("Maya");
+        mani = testStringGraph.addNode("Mani");
+        janai = testStringGraph.addNode("Janai");
+        testStringGraph.addEdge(phong,maya, 1);
+        testStringGraph.addEdge(maya, janai, 1);
+        testStringGraph.addEdge(mani, phong,2);
+        testStringGraph.addEdge(janai, mani,2);
+
+    }
     @Test
-    public void breadththrough() {
+    public void TestBreadthFirstTraversal() {
+        List<Node<String>> resultList = testStringGraph.breadthrough(maya);
+        assertEquals("[Node{value=Maya, edges=[Edge{weight=1, nextNode=Phong}]}, Node{value=Phong, edges=[Edge{weight=2, nextNode=Mani}]}, Node{value=Mani, edges=[Edge{weight=2, nextNode=Janai}]}, Node{value=Janai, edges=[Edge{weight=1, nextNode=Maya}]}]", resultList.toString());
+    }
+
+    @Test
+    public void TestBreadthFirstTraversal_TestTwo() {
+        List<Node<String>> resultList = testStringGraph.breadthFirstTraversal(phong);
+        assertEquals("[Node{value=Phong, edges=[Edge{weight=2, nextNode=Mani}]}, Node{value=Mani, edges=[Edge{weight=2, nextNode=Janai}]}, Node{value=Janai, edges=[Edge{weight=1, nextNode=Maya}]}, Node{value=Maya, edges=[Edge{weight=1, nextNode=Phong}]}]", resultList.toString());
+    }
+
+    @Test
+    public void TestBreadthFirstTraversal_TestThree() {
+        List<Node<String>> resultList = testStringGraph.breadthFirstTraversal(mani);
+        assertEquals("[Node{value=Mani, edges=[Edge{weight=2, nextNode=Janai}]}, Node{value=Janai, edges=[Edge{weight=1, nextNode=Maya}]}, Node{value=Maya, edges=[Edge{weight=1, nextNode=Phong}]}, Node{value=Phong, edges=[Edge{weight=2, nextNode=Mani}]}]", resultList.toString());
     }
 }
