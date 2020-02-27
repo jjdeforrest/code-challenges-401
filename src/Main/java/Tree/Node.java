@@ -1,8 +1,13 @@
 package Tree;
 
-public class Node<T> {
+import graph.Edge;
+
+import java.util.ArrayList;
+
+public class Node<T> extends BreadthFirst.Node {
 
     public Node<T> root;
+    public ArrayList<Edge> listEdges;
 
     public Node() {
         this.root = null;
