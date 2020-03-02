@@ -49,6 +49,6 @@
 ##Get Edge
 [challenge 37](otherReadmes/codechallenge37.md)
 
-##Get Edge
+##Depth First
 [challenge 38](otherReadmes/codechallenge38.md)
 

@@ -14,7 +14,7 @@ public class HashTableTest {
     }
 
     @Test
-    public void get() {
+    public void get(int i) {
         HashTable joker;
         joker = new HashTable();
         joker.add("joker","bane");

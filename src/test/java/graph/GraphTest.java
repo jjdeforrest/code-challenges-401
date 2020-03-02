@@ -19,15 +19,15 @@ public class GraphTest {
     //Node can be successfully added to the graph
     @Test
     public void testAddNode(){
-        graph.addNode(13);
+        graph.addNode(3);
         assertEquals(1,graph.size());
-        assertEquals(13,graph.list.get(0).value);
+        assertEquals(3,graph.list.get(0).value);
     }
 
     //An edge can be successfully added to the graph
     @Test
     public void testAddEdge(){
-        graph.addEdge(graph.addNode(3),graph.addNode(7),9);
+        graph.addEdge(graph.addNode(9),graph.addNode(2),4);
         assertEquals(graph.list.get(0).edges.get(0).node,graph.list.get(1));
 
     }
