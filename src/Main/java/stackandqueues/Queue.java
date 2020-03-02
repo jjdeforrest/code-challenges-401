@@ -6,7 +6,7 @@ import java.util.EmptyStackException;
 
 public class Queue {
 
-    Node front;
+    public Node front;
 
     public Queue() {};
 
