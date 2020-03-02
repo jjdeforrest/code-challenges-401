@@ -37,10 +37,13 @@
 
 [challenge 30](otherReadmes/codechallenge30.md)
 
+##Repeated Word
 [challenge 32](otherReadmes/codechallenge32.md)
 
+##Tree intersection
 [challenge 33](otherReadmes/codechallenge33.md)
 
+##Graph implementation 
 [challenge 35](otherReadmes/codechallenge35.md)
 
 ##breadth-first
